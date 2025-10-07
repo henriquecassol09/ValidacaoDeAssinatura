@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Assinaturas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Validador de Assinaturas</h1>
+            <p>Sistema de registro e validação de assinaturas digitais</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="save">Salvar Assinatura</button>
+            <button class="tab-button" data-tab="validate">Validar Assinatura</button>
+        </div>
+
+        <!-- Tab: Salvar Assinatura -->
+        <div class="tab-content active" id="save-tab">
+            <div class="form-section">
+                <label for="save-name">Nome Completo:</label>
+                <input type="text" id="save-name" placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="canvas-section">
+                <h3>Desenhe sua assinatura:</h3>
+                <canvas id="save-canvas"></canvas>
+                <div class="canvas-controls">
+                    <button id="clear-save-canvas" class="btn-secondary">Limpar</button>
+                </div>
+            </div>
+
+            <button id="save-signature-btn" class="btn-primary">Salvar Assinatura</button>
+            <div id="save-message" class="message"></div>
+        </div>
+
+        <!-- Tab: Validar Assinatura -->
+        <div class="tab-content" id="validate-tab">
+            <div class="form-section">
+                <label for="validate-name">Nome para Validar:</label>
+                <div class="autocomplete-container">
+                    <input type="text" id="validate-name" placeholder="Digite o nome para buscar" autocomplete="off">
+                    <div id="autocomplete-list" class="autocomplete-list"></div>
+                </div>
+                <button id="search-signature-btn" class="btn-primary">Buscar Assinatura</button>
+            </div>
+
+            <div id="validation-area" class="validation-area hidden">
+                <div class="comparison-container">
+                    <div class="signature-box">
+                        <h3>Assinatura Registrada</h3>
+                        <canvas id="reference-canvas"></canvas>
+                    </div>
+
+                    <div class="signature-box">
+                        <h3>Nova Assinatura</h3>
+                        <canvas id="validate-canvas"></canvas>
+                        <div class="canvas-controls">
+                            <button id="clear-validate-canvas" class="btn-secondary">Limpar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="validation-result">
+                    <p id="validation-message"></p>
+                </div>
+            </div>
+
+            <div id="validate-message" class="message"></div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
