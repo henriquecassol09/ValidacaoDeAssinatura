@@ -8,8 +8,8 @@ const firebaseConfig = {
   projectId: "assinatura-74b86",
   storageBucket: "assinatura-74b86.firebasestorage.app",
   messagingSenderId: "184248073971",
-  appId: "1:184248073971:web:5d37b609d1df5b47e34186"
-};
+  appId: "1:184248073971:web:5d37b609d1df5b47e34186",
+}
 
 // Importações do Firebase (usando CDN via import maps)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"
@@ -79,7 +79,7 @@ function initializeSaveCanvas() {
   saveCanvas.width = saveCanvas.offsetWidth
   saveCanvas.height = 200
 
-  saveCtx.strokeStyle = "#000"
+  saveCtx.strokeStyle = "#9b59d0"
   saveCtx.lineWidth = 2
   saveCtx.lineCap = "round"
   saveCtx.lineJoin = "round"
@@ -142,7 +142,7 @@ function initializeValidateCanvas() {
   validateCanvas.width = 400
   validateCanvas.height = 200
 
-  validateCtx.strokeStyle = "#000"
+  validateCtx.strokeStyle = "#9b59d0"
   validateCtx.lineWidth = 2
   validateCtx.lineCap = "round"
   validateCtx.lineJoin = "round"
